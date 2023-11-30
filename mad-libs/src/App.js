@@ -1,4 +1,3 @@
-import './App.css';
 import MadlibGame from './MadlibGame';
 
 function App() {

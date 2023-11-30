@@ -9,12 +9,16 @@ const MadlibGame = () => {
         setStory(storyData);
     };
 
+    const restartGame = () => {
+        setStory(null);
+    };
+
     return (
         <div>
             {!story ? (
                 <MadlibForm onStoryUpdate={handleStoryUpdate} />
             ) : (
-                <MadlibStory story={story} />
+                <MadlibStory story={story} onRestart={restartGame} />
             )}
         </div>
     );
